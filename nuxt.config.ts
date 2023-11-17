@@ -25,4 +25,16 @@ export default defineNuxtConfig({
       }],
     },
   },
+
+  // отключение внешних стилей (эксперементальное):
+  hooks: {
+    'build:manifest': (manifest) => {
+      const css = manifest['node_modules/nuxt/dist/app/entry.js']?.css;
+      if (css) {
+        for (let i = css.length - 1; i >= 0; i -= 1) {
+          if (css[i].startsWith('entry')) css.splice(i, 1);
+        }
+      }
+    }
+  },
 })
