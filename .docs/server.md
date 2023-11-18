@@ -6,7 +6,7 @@ _Nitro_ - cерверный Nuxt-фреймворк позволяет разр�
 
 ## Эндпоинты и промежуточные компоненты (middlewares)
 
-Пример API: 
+Пример API (`/server/api`): 
 
 ```typescript
 // /server/api/count.ts
@@ -28,6 +28,41 @@ const { data: count } = await useFetch('/api/count');
 <template>
 <div>Count: {{ count }}</div>
 </template>
+```
+
+Пример серверного маршрута (`/server/routes`):
+
+```typescript
+// /server/routes/hello.ts
+// будет доступен по адресу: <domain>/hello
+
+export default defineEventHandler((event) => {
+    return 'Hello from the server';
+});
+```
+
+Пример промежуточного компонента сервера (`/server/middleware`):
+
+```typescript
+// /server/middleware/auth.ts
+
+export default defineEventHandler((event) => {
+    // логирование запроса
+    console.log('New request: ', getRequestURL(event));
+    // добавление данных в запрос
+    event.context.auth = { user: 'admin' };
+});
+```
+
+```typescript
+// /server/api/auth.ts
+
+export default defineEventHandler((event) => {
+    return {
+        auth: event.context.auth,
+        // any other user data
+    }
+});
 ```
 
 Сервер может отдавать текст, json, html и steam. Также поддерживает HMR и автоимпорты.
@@ -55,4 +90,11 @@ routeRules: {
 
 Некоторые правила маршрутизации специфичны для Nuxt, например: `ssr` или `experimentalNoScripts`. Правила вроде `prerender` и `redirect` оказывают эффект на поведение клиента. _Nitro_ одинаково хорошо применяется как для SSR, так и для пререндеринга страниц.
 
+## Утилиты
+
+_Nitro_ поставляется с большим числом утилит/хэлперов _h3_, например: `defineEventHandler`. Можно добавить свои утилиты в `/server/utils`.
+
+## Типизация
+
+Свойство `"extends": "../.nuxt/tsconfig.server.json"` в конфиге `/server/tsconfig.json` обеспечивает улучшает типизацию автоимпортов в _Nitro_ и _Vue_ и добавляет информацию о типах во всплывающие подсказки в IDE.
 

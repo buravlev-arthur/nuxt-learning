@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   // правила рендеринга
   routeRules: {
     '/about': { prerender: true },
-    '/api/*': { cache: { maxAge: 3600 }},
+    // '/api/*': { cache: { maxAge: 3600 }},
     '/old-page': { redirect: { to: '/login', statusCode: 302 }}, 
   }
 })
