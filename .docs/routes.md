@@ -55,7 +55,7 @@ definePageMeta({
 </script>
 ```
 
-## Валидаци
+## Валидация
 
 ```typescript
 <script lang="ts">

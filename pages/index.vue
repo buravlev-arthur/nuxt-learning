@@ -12,6 +12,7 @@ definePageMeta({
         <img width="80" src="/imgs/logo.png" alt="logo of nuxt" />
         <h4>Статика, загруженная и обработнная сборщиком из /asset:</h4>
         <img width="80" src="~/assets/logo.png" alt="logo of nuxt" />
+        <CountComponent />
     </div>
 </template>
 
