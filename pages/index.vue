@@ -19,6 +19,8 @@ definePageMeta({
     layout: "default",
     middleware: ['auth'],
 })
+
+const count = useCount();
 </script>
 
 <template>
@@ -29,6 +31,8 @@ definePageMeta({
         <h4>Статика, загруженная и обработнная сборщиком из /asset:</h4>
         <img width="80" src="~/assets/logo.png" alt="logo of nuxt" />
         <CountComponent />
+        <button @click="() => count++">+</button>
+        <button @click="() => count--">-</button>
     </div>
 </template>
 
