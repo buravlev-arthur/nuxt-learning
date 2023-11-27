@@ -28,6 +28,10 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       // titleTemplate: 'Название сайта | %s',
     },
+    // Переходы между страницами
+    pageTransition: { name: 'page', mode: 'out-in' },
+    // Переходы между шаблонами
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
 
   // отключение внешних стилей (эксперементальное):
@@ -47,5 +51,10 @@ export default defineNuxtConfig({
     '/about': { prerender: true },
     // '/api/*': { cache: { maxAge: 3600 }},
     '/old-page': { redirect: { to: '/login', statusCode: 302 }}, 
+  },
+
+  // эксперементальные опции
+  experimental: {
+    viewTransition: true,
   }
 })

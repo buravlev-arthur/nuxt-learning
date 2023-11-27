@@ -1,9 +1,15 @@
 <script setup lang="ts">
 definePageMeta({
     layout: "custom",
+    layoutTransition: {
+        name: 'rotate',
+    },
 })
 </script>
 
 <template>
-    <p>about page</p>
+    <div>
+        <p>about page</p>
+        <li><NuxtLink to="/login">Login</NuxtLink></li>
+    </div>
 </template>

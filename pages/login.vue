@@ -1,10 +1,12 @@
 <template>
-    <p>login page</p>
-    <h6>Данные авторизации:</h6>
-    <!-- <p>Count: {{  data?.count }}</p> -->
-    <p>Login: {{ data?.auth.user}}</p>
-    <p>Password: {{ data?.auth.password }}</p>
-    <p>Date: {{ data?.createdAt.toLocaleDateString() }}</p>
+    <div id="container">
+        <p>login page</p>
+        <h6>Данные авторизации:</h6>
+        <!-- <p>Count: {{  data?.count }}</p> -->
+        <p>Login: {{ data?.auth.user}}</p>
+        <p>Password: {{ data?.auth.password }}</p>
+        <p>Date: {{ data?.createdAt.toLocaleDateString() }}</p>
+    </div>
 </template>
 
 <script lang="ts" setup>
