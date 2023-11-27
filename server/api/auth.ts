@@ -4,7 +4,7 @@ import type { Auth } from '~/types';
 
 
 export default defineEventHandler((event) => {
-    console.log(event.headers);
+    // console.log(event.headers);
 
     const response: Auth = {
         auth: event.context.auth,
