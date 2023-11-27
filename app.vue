@@ -9,3 +9,11 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+<script lang="ts" setup>
+useHead({
+  titleTemplate: (titleOfPage) => {
+    return titleOfPage ? `Название сайта | ${titleOfPage}` : `Название сайта`;
+  }
+})
+</script>

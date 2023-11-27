@@ -1,4 +1,20 @@
 <script setup lang="ts">
+useHead({
+    script: [
+        { src: '/js/script.js' },
+        { innerHTML: 'console.log(\'test\')', tagPosition: 'bodyOpen' }
+    ],
+    bodyAttrs: {
+        class: 'dark small',
+    },
+})
+
+useSeoMeta({
+    title: 'Главная страница',
+    description: 'Описание страницы',
+    keywords: 'главная, страница, информация',
+})
+
 definePageMeta({
     layout: "default",
     middleware: ['auth'],
