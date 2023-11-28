@@ -55,6 +55,9 @@ export default defineNuxtConfig({
 
   // эксперементальные опции
   experimental: {
+    // включение нативных барузерных анимаций переходов
     viewTransition: true,
+    // способ обработки ошибок JS-chunk'ов (automatic, manual, false)
+    emitRouteChunkError: "automatic",
   }
-})
+});
