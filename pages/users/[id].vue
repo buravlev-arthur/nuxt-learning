@@ -15,9 +15,9 @@
 
 <script setup lang="ts">
 definePageMeta({
-    validate: async (route) => {
-        return Number(route.params.id) === 0;
-    },
+    // validate: async (route) => {
+    //     return Number(route.params.id) === 0;
+    // },
     // переопределение pageTransition
     pageTransition: {
         name: 'rotate',

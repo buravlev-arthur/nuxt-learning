@@ -59,5 +59,18 @@ export default defineNuxtConfig({
     viewTransition: true,
     // способ обработки ошибок JS-chunk'ов (automatic, manual, false)
     emitRouteChunkError: "automatic",
-  }
+  },
+
+  // настройки сервера
+  nitro: {
+    // установка пресета для сборки и деплоя
+    preset: 'node-server',
+
+    // селективный пререндеринг страниц
+    prerender: {
+      crawlLinks: true,
+      routes: ['/users/1', '/users/2', '/hello-from-server'],
+      ignore: ['/login'],
+    }
+  },
 });
