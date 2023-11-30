@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  // рендеринг SPA-приложения вместо SSR
+  // ssr: false,
 
   // глобальное подключение стилей
   css: ['~/assets/styles.css', 'animate.css'],
