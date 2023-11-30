@@ -75,4 +75,10 @@ export default defineNuxtConfig({
       ignore: ['/login'],
     }
   },
+
+  // слои
+  extends: [
+    // '@nuxt-themes/docus',
+    'github:nuxt-themes/docus#v1.15.0',
+  ],
 });
