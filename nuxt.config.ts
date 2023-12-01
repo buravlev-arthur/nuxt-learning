@@ -79,6 +79,6 @@ export default defineNuxtConfig({
   // слои
   extends: [
     // '@nuxt-themes/docus',
-    'github:nuxt-themes/docus#v1.15.0',
+    // 'github:nuxt-themes/docus#v1.15.0',
   ],
 });

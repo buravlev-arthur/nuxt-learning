@@ -25,10 +25,6 @@ const count = useCount();
 
 <template>
     <div id="container">
-        <Card icon="logos:nuxt-icon">
-            <template #title>Заголовок</template>
-            <template #description>Описание</template>
-        </Card>
         <p>main page</p>
         <h4>Статика, загруженная из /public:</h4>
         <img width="80" src="/imgs/logo.png" alt="logo of nuxt" />
@@ -37,7 +33,6 @@ const count = useCount();
         <CountComponent />
         <button @click="() => count++">+</button>
         <button @click="() => count--">-</button>
-        <Alert class="warning">Текст сообщения</Alert>
     </div>
 </template>
 

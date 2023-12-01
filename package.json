@@ -6,6 +6,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

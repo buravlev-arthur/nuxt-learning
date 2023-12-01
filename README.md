@@ -1,75 +1,58 @@
-# Nuxt 3 Minimal Starter
+# Учебный Nuxt 3 проект
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Здесь собраны примеры использования инструментов Nuxt 3 и представлены русскоязычные конспекты официальной документации.
 
-## Setup
-
-Make sure to install the dependencies:
+## Установка и использование
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
+# клонирование репозитория (через ssh)
+git clone git@github.com:buravlev-arthur/nuxt-learning.git
+# установка
+cd nuxt-learning && bun install
+# разработка (dev-сервер)
+bun run dev -o
+# сборка node.js-сервера
 bun run build
+# генерация html-статики
+bun run generate
+# тестирование
+bun run test
+# покрытие тестами
+bun run test:coverage
 ```
 
-Locally preview production build:
+## Документация
 
-```bash
-# npm
-npm run preview
+- [Конфигурация](.docs/configuration.md)
 
-# pnpm
-pnpm run preview
+- [Представления](.docs/views.md)
 
-# yarn
-yarn preview
+- [Статические данные (assets)](.docs/assets.md)
 
-# bun
-bun run preview
-```
+- [Стили](.docs/styles.md)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [Маршрутизация](.docs/routes.md)
+
+- [SEO и мета-данные](.docs/seo.md)
+
+- [Анимации переходов](.docs/transitions.md)
+
+- [Получение данных (запросы)](.docs/fetching.md)
+
+- [Менеджер состояний (states)](.docs/state-management.md)
+
+- [Обработка ошибок](.docs/errors.md)
+
+- [Сервер](.docs/server.md)
+
+- [Слои](.docs/layers.md)
+
+- [Развертывание приложения (deploy)](.docs/deploy.md)
+
+- [Тестирование](.docs/tests.md)
+
+- [Обновление Nuxt](.docs/upgrade.md)
+
+- Концепции
+    - [Рендеринг](.docs/concepts//rendering.md)
+
